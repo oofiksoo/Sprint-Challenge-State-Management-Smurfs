@@ -1,28 +1,117 @@
 .App {
-  text-align: center;
+    margin: 0rem;
+    padding: 0rem;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.SmurfHeader {
+    height: 5vh;
+    background: skyblue;
+    color: white;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    text-align: center;
+    margin: 0rem 1rem;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+.SmurfHeader h1 {
+    margin: 0;
 }
 
-.App-title {
-  font-size: 1.5em;
+.SmurfForm {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid skyblue;
+    border-radius: 1rem;
+    width: 20%;
+    margin: 2rem;
 }
 
-.App-intro {
-  font-size: large;
+.SmurfForm h3 {
+    color: skyblue;
+    text-align: center;
+}
+
+.SmurfForm button {
+    background-color: skyblue;
+    color: white;
+    border: 0px solid skyblue;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin: 1rem;
+}
+
+.SmurfForm input {
+    background-color: white;
+    color: skyblue;
+    border: 2px solid skyblue;
+    border-radius: 0.5rem;
+    margin: 1rem;
+    padding: 0.5rem;
+}
+
+.SmurfContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin-right: 1rem;
+    border: 2px solid skyblue;
+    border-radius: 0.5rem;
+    position: absolute;
+    left: 25%;
+    top: 8.5vh;
+    width: 72%;
+}
+
+.SmurfCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem;
+    border: 2px solid skyblue;
+    border-radius: 0.5rem;
+    width: 20%;
+    text-align: center;
+    padding: 1rem;
+}
+
+.SmurfCard img {
+    margin: 0.5rem;
+    border: 2px solid skyblue;
+    border-radius: 50%;
+}
+
+.SmurfCard h2 {
+    color: skyblue;
+    font-weight: bolder;
+}
+
+.SmurfDetails {
+    color: white;
+    background-color: skyblue;
+    margin: 1rem 0rem;
+    border: 2px solid skyblue;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    width: 80%;
+    font-weight: bolder;
+}
+
+.SmurfDetails button {
+    background-color: white;
+    color: skyblue;
+    border: 2px solid white;
+    border-radius: 0.5rem;
+    margin: 1rem;
+    font-weight: bolder;
 }
 
 @keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
