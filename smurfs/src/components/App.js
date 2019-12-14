@@ -1,16 +1,34 @@
 import React, { Component } from "react";
 import "./App.css";
+import { connect } from "react-redux";
+import SmurfForm from "./SmurfForm";
+import { getSmurfs, deleteData } from "../actions";
+import { Smurfs } from "./Smurfs";
+
 class App extends Component {
+  componentDidMount() {
+    this.props.getSmurfs();
+  }
   render() {
+    if (this.props.fetching) {
+      return <h3> Your Smurfs are Smurfing as fast as they can!!</h3>;
+    }
     return (
       <div className="App">
-        <h1>SMURFS! 2.0 W/ Redux</h1>
-        <div>Welcome to your state management version of Smurfs!</div>
-        <div>Start inside of your `src/index.js` file!</div>
-        <div>Have fun!</div>
+        <div className="SmurfHeader">
+          <h1> Welcome to a Smurfingly good SMURF Smurfatory!!! </h1>
+        </div>
+        <SmurfForm />
+        <Smurfs smurfs={this.props.smurfs} />
       </div>
     );
   }
 }
-
-export default App;
+const mapStateToProps = state => {
+  return {
+    smurfs: state.smurfs,
+    fetchingSmurf: state.fetching,
+    deleteData: state.deleteData
+  };
+};
+export default connect(mapStateToProps, { getSmurfs, deleteData })(App);
